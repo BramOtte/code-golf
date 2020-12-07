@@ -11,21 +11,17 @@
     </header>
     <main>
         <h1>Connect4</h1>
-        <iframe src="js/snake.html" width="500" height="310"></iframe><br>
+        <iframe src="js/connect4.html" width="500" height="310"></iframe><br>
         <br><br>
         copy this link into your browser window to play offline<br>
-        <code>data:text/html,&ltscript>s=12,M=Math,P=M.PI/2,r=e=>0|M.random()*s,c=60,K={d:0,s:1,a:2,w:3},f=`fillStyle`,I=[],i=x=y=X=Y=0,F=[],T=[],t=h=3,d=document,H=d.createElement(`canvas`),H.width=H.height=s*c,H.style.background=`wheat`,G=H.getContext(`2d`),G.scale(c,c),p=(a,b)=>G.fillRect(a,b,1,1),onkeydown=a=>{L=I[0]??i,k=K[a.key],k+1&&k!=L&&k!=(L+2)%4&&I.push(k)},setInterval(e=>{for(d.body.append(H),G[f]=`darkgreen`,p(x,y),i=I.shift()??i,x=(x+M.cos(i*P)+s)%s,y=(y+M.sin(i*P)+s)%s,q=x+y*s,T.push([x,y]);T.length>t;)S=T.shift(),F[S[0]+S[1]*s]=0,G.clearRect(...S,1,1);if(1==F[q]&&(t=3),F[q]=1,x==X&y==Y){for(t++;F[X+Y*s];)Y=r(),X=r();t>h&&(h=t)}G[f]=`green`,p(x,y),G[f]=`red`,p(X,Y),d.title=`snake `+t+`/`+h},200)&lt/script>
+        <code>
+            data:text/html,&ltscript>g="grey",t=0,w=7,h=6,d=document,d.i=d.getElementById,d.c=d.createElement,C=()=>t%2?"red":"blue",onload=()=>{for(f.a=f.appendChild,f.style.gridTemplateColumns=`repeat(${w},1fr)`,i=0;i&ltw;i++)b=d.c("button"),b.i=i,b.onclick=c,f.a(b);for(i=0;i&ltw*h;i++){let a=d.c("div");a.G=()=>a.style.backgroundColor,a.S=g=>a.style.backgroundColor=g,a.id=i,a.S(g),f.a(a)}},c=a=>p(a.target.i),p=a=>{e=d.i(a),a&ltw*h&&g==e.G()?p(a+w):(e=d.i(a-w),e.S(C()),k(a)&&(alert(C()+" won"),location.reload()),t++,d.body.style.background=C())},k=a=>(x=a%w,y=0|-1+a/w,c=C(),s=(g,j,l,m)=>{for(n=0,a=0;7>a;a++,g+=l,j+=m)if(!(0>g||g>=w||0>j||j>=h))if(e=d.i(g+j*w),e.G()!=c)n=0;else if(4&lt=(n+=1))return 1},s(x-3,y,1,0)||s(x,y-3,0,1)||s(x-3,y-3,1,1)||s(x+3,y-3,-1,1))&lt/script>&ltp id=f>&ltstyle>body{background:blue}*{margin:5}p{background:white;width:min-content;margin:auto;display:grid}p>*{width:100;height:100}
         </code>
         <br><br>
         <h2>Source Code</h2>
         <h3>Javascript</h3>
-        stand alone:<br>
-        <a href="js/snake.js">snake.js</a><br>
-        <a href="js/snake.min.js">snake.js minified</a><br><br>
-        as a function:<br>
-        <a href="js/snakefunc.js">snakefunc.js</a><br>
-        <a href="js/snakefunc.premin.js">snakefunc.js prepared for minification</a><br>
-        <a href="js/snakefunc.min.js">snakefunc.js minified</a>
+        <a href="js/connect4.js">connect4.js</a><br>
+        <a href="js/connect4.min.js">connect4.js minified</a>
 
     </main>
 </body>

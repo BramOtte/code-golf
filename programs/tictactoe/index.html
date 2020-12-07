@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe, codeGolf</title>
+</head>
+<body>
+    <header>
+        <a href="../../">home</a>
+    </header>
+    <main>
+        <h1>Connect4 text</h1>
+        <iframe src="js/tictactoe.html" width="500" height="310"></iframe><br>
+        <br><br>
+        copy this link into your browser window to play offline<br>
+        <code>
+            data:text/html,&ltscript>onload=R=()=>{t="o",h="",b=["...","...","..."].map((a,d)=>(h+="&ltbr>",a.split("").map((a,e)=>(h+=`&ltbutton onclick=C(this,${[e,d]})>.&lt/button>`,a)))),p.innerHTML=h},C=(a,d,e)=>{t="x"==t?"o":"x",a.innerHTML=t,a.onclick="",b[e][d]=t,c=a=>b.reduce((d,e)=>d&e[a]==t,1),r=a=>b[a].join("")==t.repeat(3),r(0)|r(1)|r(2)|c(0)|c(1)|c(2)|b[1][1]==t&(b[0][0]==t&b[2][2]==t|b[0][2]==t&b[2][0]==t)&&(alert(t+" has won!"),R())}&lt/script>&ltp id=p>
+        </code>
+        <br><br>
+        <h2>Source Code</h2>
+        <h3>Javascript</h3>
+        <a href="js/tictactoe.js">tictactoe.js</a><br>
+        <a href="js/tictactoe.premin.js">tictactoe.js prepared for minification</a><br>
+        <a href="js/tictactoe.min.js">text4.js minified</a><br>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    background: blue;
+}
+#field {
+    background: white;
+    width: 50%;
+    margin: auto;
+    display:grid;
+    grid-auto-rows: 1fr;
+}
+#field::before {
+  content: '';
+  width: 0;
+  height: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+#field > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+* {
+    margin: 2px;
+}
