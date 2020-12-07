@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake, codeGolf</title>
+</head>
+<body>
+    <header>
+        <a href="../../">home</a>
+    </header>
+    <main>
+        <h1>Snake</h1>
+        <iframe src="js/snake.html" width="500" height="310"></iframe><br>
+        <br><br>
+        copy this link into your browser window to play offline<br>
+        <code>data:text/html,&ltscript>s=12,M=Math,P=M.PI/2,r=e=>0|M.random()*s,c=60,K={d:0,s:1,a:2,w:3},f=`fillStyle`,I=[],i=x=y=X=Y=0,F=[],T=[],t=h=3,d=document,H=d.createElement(`canvas`),H.width=H.height=s*c,H.style.background=`wheat`,G=H.getContext(`2d`),G.scale(c,c),p=(a,b)=>G.fillRect(a,b,1,1),onkeydown=a=>{L=I[0]??i,k=K[a.key],k+1&&k!=L&&k!=(L+2)%4&&I.push(k)},setInterval(e=>{for(d.body.append(H),G[f]=`darkgreen`,p(x,y),i=I.shift()??i,x=(x+M.cos(i*P)+s)%s,y=(y+M.sin(i*P)+s)%s,q=x+y*s,T.push([x,y]);T.length>t;)S=T.shift(),F[S[0]+S[1]*s]=0,G.clearRect(...S,1,1);if(1==F[q]&&(t=3),F[q]=1,x==X&y==Y){for(t++;F[X+Y*s];)Y=r(),X=r();t>h&&(h=t)}G[f]=`green`,p(x,y),G[f]=`red`,p(X,Y),d.title=`snake `+t+`/`+h},200)&lt/script>
+        </code>
+        <br><br>
+        <h2>Source Code</h2>
+        <h3>Javascript</h3>
+        stand alone:<br>
+        <a href="js/snake.js">snake.js</a><br>
+        <a href="js/snake.min.js">snake.js minified</a><br><br>
+        as a function:<br>
+        <a href="js/snakefunc.js">snakefunc.js</a><br>
+        <a href="js/snakefunc.premin.js">snakefunc.js prepared for minification</a><br>
+        <a href="js/snakefunc.min.js">snakefunc.js minified</a>
+
+    </main>
+</body>
+</html>

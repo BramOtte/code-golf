@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <script src="snakefunc.min.js"></script>
+</head>
+<body>
+    <script>onload=a=>{let {canvas,step,input,score}=snake(),K={d:0,s:1,a:2,w:3};setInterval(a=>{step();ScoreBoard.innerText=score()},200);
+onkeydown = e => input(K[e.key]);SnakeDiv.append(canvas)}
+    </script>
+    <div id=SnakeDiv>
+        <div id=ScoreBoard></div>
+    </div>
+</body>
+</html>
